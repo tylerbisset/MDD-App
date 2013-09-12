@@ -1,15 +1,65 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto);
+@import url(http://fonts.googleapis.com/css?family=Raleway:500);
+
 body {
-   background-color: #ffffff;
+   background-color: #222222;
+   font-family: arial, sans-serif;
+   color: #f9f9f9;
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
 }
+
 h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
+   font-family: 'Raleway', sans-serif;
+   color: #f9f9f9;
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
 }
+
 .banner {
-    background-color: #000;
-    color: #FFF;
+    background-color: #33b5e5;
     height: 100px;
 }
+
 .banner h1 {
     font-size: 50px;
     line-height: 50px;
+}
+
+input[type=text], select{
+   padding: 0 10px;
+   width: 300px;
+   height: 40px;
+   color: #f9f9f9;
+   text-shadow: 1px 1px 1px black;
+   background: rgba(0, 0, 0, 0.16);
+   border: 0;
+   border-radius: 5px;
+   -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+   box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.06);
+}
+
+label {   
+   color: #f9f9f9;
+   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+}
+
+ul {  
+   list-style: none;
+}
+
+.main-frame {
+    padding: 10px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.search-box {  
+   margin-bottom: 10px;
+   margin-top: 10px;
+}
+
+.episode-list li {
+   padding-bottom: 10px;
+   margin-bottom: 10px;
+   border-bottom: dotted 1px #177bbd;
+}
