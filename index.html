@@ -6,7 +6,6 @@
 	<script type="text/javascript" src="js/angular.min.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-responsive.min.css">
-
 	<!-- app specific js and css -->
 	<script type="text/javascript" src="js/tv-pop/app.js"></script>
 	<script type="text/javascript" src="js/tv-pop/controllers/mainController.js"></script>
@@ -16,22 +15,29 @@
 	<div class='banner'>
         <div class='container'>
             <h1>TV Pop</h1>
-	    <p>Check times for your favorite premiere's!</p>
+	    <p>Check times for your favorite premieres!</p>
         </div>
 	</div><!-- banner -->
 	<div class="container main-frame" ng-app="tv-pop" ng-controller="mainController" ng-init="init()">
 	<div class="search-box row-fluid form-inline">
-		<label>Filter: </label>
+		<label>Search: </label>
 		<input type="text" ng-model="filterText"/>
 		<label>Genre: </label>
 		<select ng-model="genreFilter" ng-options="label for label in availableGenres">
 			<option value="">All</option>
 		</select>
+		<label>Order by: </label>
+		<select ng-model="orderField" ng-options="label for label in orderFields" class="input-medium"></select>
+		<select ng-model="orderReverse" class="input-medium">
+			<!-- value default can be set in controller-->
+			<option value="true">Descending</option>
+			<option value="false">Ascending</option>
+		</select>
 	</div><!-- search box -->
         <div class="results-top"></div>
         <div class="results-container">
             <ul class="episode-list">
-		<li ng-repeat="tvshow in results | filter: filterText">
+		<li ng-repeat="tvshow in results | filter: filterText | isGenre:genreFilter | orderBy:customOrder:orderReverse">
 			<div class="row-fluid">
 			    <div class="span3">
 				<img src="{{tvshow.episode.images.screen}}" />
@@ -47,7 +53,7 @@
 				    <li>On Air: {{tvshow.show.air_day}} {{tvshow.show.air_time}}</li>
 				    <li>Network: {{tvshow.show.network}}</li>
 				    <li>Season #: {{tvshow.episode.season}}</li>
-				    <li>Genres: <span class="label label-inverse genre" ng-repeat="genre in tvshow.show.genres">{{genre}}</span></li>
+				    <li>Genres: <span class="label label-inverse genre" ng-repeat="genre in tvshow.show.genres" ng-click="setGenreFilter(genre)">{{genre}}</span></li>
 				</ul>
 			    </div><!-- span3 -->
 			</div><!-- row-fluid -->
