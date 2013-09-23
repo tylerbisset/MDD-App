@@ -1,4 +1,4 @@
-app.controller("mainController", function($scope, $http){
+/*app.controller("mainController", function($scope, $http){
     
     $scope.apiKey = "5352eb129c5c10844ad5ed22ada4bb4c";
     $scope.results = [];
@@ -17,7 +17,7 @@ app.controller("mainController", function($scope, $http){
         var apiDate = today.getFullYear() + ("0" + (today.getMonth() + 1)).slice(-2) + "" + ("0" + today.getDate()).slice(-2);
         //json call: modify value after apiDate for number of days after today
         //**Higher values severely effect loading times**
-        $http.jsonp('http://api.trakt.tv/calendar/premieres.json/' + $scope.apiKey + '/' + apiDate + '/' + 15 + '/?callback=JSON_CALLBACK').success(function(data) {
+        $http.jsonp('http://api.trakt.tv/calendar/premieres.json/' + $scope.apiKey + '/' + apiDate + '/' + 8 + '/?callback=JSON_CALLBACK').success(function(data) {
             //format data for each day get all the episodes
             angular.forEach(data, function(value, index){
                 //API stores full date separately from each episode. Save it for use later
