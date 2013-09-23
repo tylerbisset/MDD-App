@@ -109,9 +109,20 @@ ul {
    margin-right: 5px;
 }
 
+.go-top{
+   position: fixed;
+   bottom: 10px;
+   right: 6%;
+   text-decoration: none;
+   background-color: #33b5e5;
+   color: #fff;
+   display: none;
+}
+
 #footer {
    height: 30px;
-   padding: 10px 5px 10px 5px;
+   line-height: 30px;
+   padding: 10px;
    background: #33b5e5;
    -moz-border-top-left-radius: 5px;
    -moz-border-top-right-radius: 5px;

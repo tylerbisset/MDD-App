@@ -1,4 +1,4 @@
-/*app.controller("mainController", function($scope, $http){
+app.controller("mainController", function($scope, $http){
     
     $scope.apiKey = "5352eb129c5c10844ad5ed22ada4bb4c";
     $scope.results = [];
