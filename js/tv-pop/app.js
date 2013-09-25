@@ -1,4 +1,9 @@
-var app = angular.module('tv-pop',[]);
+var app = angular.module('tv-pop',[]).
+    config(function($routeProvider) {
+    $routeProvider.
+        when('/about', {templateUrl: 'views/about.html', controller: 'AboutCtrl'}).
+        otherwise({redirectTo: '/', templateUrl: 'views/show-list.html', controller: 'mainController'});
+    });
 
 //jQuery for top button
 $(document).ready(function(){

@@ -84,5 +84,17 @@ app.filter('isGenre', function() {
     };
 });
 
+function HomeCtrl($scope, $location) {
+    $scope.setRoute = function(route) {
+	    $location.path(route);
+    }
+}
+
+function AboutCtrl($scope, $location) {
+    $scope.setRoute = function(route) {
+	    $location.path(route);
+    }
+}
+
 
 
