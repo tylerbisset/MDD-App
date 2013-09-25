@@ -66,8 +66,10 @@ app.controller("mainController", function($scope, $http){
     };
 });
 
+//genre filter
 app.filter('isGenre', function() {
     return function(input, genre) {
+        //checks if show has no genre
         if (typeof genre == 'undefined' || genre == null) {
             return input;
         } else {
@@ -83,18 +85,6 @@ app.filter('isGenre', function() {
         }
     };
 });
-
-function HomeCtrl($scope, $location) {
-    $scope.setRoute = function(route) {
-	    $location.path(route);
-    }
-}
-
-function AboutCtrl($scope, $location) {
-    $scope.setRoute = function(route) {
-	    $location.path(route);
-    }
-}
 
 
 

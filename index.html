@@ -2,6 +2,7 @@
 <html ng-app="tv-pop">
 <head>
 	<title>TV Pop</title>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- third party js and css -->
 	<script type="text/javascript" src="js/angular.min.js"></script>
@@ -17,14 +18,15 @@
 	<div class='banner'>
         <div class='container'>
             <a href="#/"><img src="img/logo.png" alt="logo" /></a>
-	    <a href="#/about">About</a>
         </div>
 	</div><!-- banner -->
 	
-	<div ng-view></div>
+	<!-- view for routerProvider -->
+	<div ng-view>Loading...</div>
 	
 	<div id="footer">
-		<p>&copy; 2013 TV Pop</p>
+		&copy; 2013 TV Pop
+		<a href="#/about" class="ft-nav">About</a>		
 		<a href="#" class="go-top">Back to Top</a>
 	</div>
 </body>

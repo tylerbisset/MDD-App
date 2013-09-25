@@ -1,7 +1,7 @@
 var app = angular.module('tv-pop',[]).
     config(function($routeProvider) {
     $routeProvider.
-        when('/about', {templateUrl: 'views/about.html', controller: 'AboutCtrl'}).
+        when('/about', {templateUrl: 'views/about.html'}).
         otherwise({redirectTo: '/', templateUrl: 'views/show-list.html', controller: 'mainController'});
     });
 
