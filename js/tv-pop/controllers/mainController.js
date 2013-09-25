@@ -43,7 +43,7 @@ app.controller("mainController", function($scope, $http){
                 });
             });
         }).error(function(error) {
- 
+            
         });
     }; //init
     
