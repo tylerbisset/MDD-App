@@ -6,12 +6,9 @@ body {
    color: #f9f9f9;
 }
 
-h1, h2, h3 {
+h3 {
    font-family: 'Raleway', sans-serif;
    color: #f9f9f9;
-}
-
-h3 {
    margin-top: 0;
    line-height: 30px;
 }
@@ -19,15 +16,12 @@ h3 {
 .banner {
    background-color: #33b5e5;
    height: 100px;
-}
-
-.banner h1 {
-   font-size: 50px;
-   line-height: 50px;
+   padding: 10px 5px 0 5px;
 }
 
 .search-box {
-   line-height: 50px;
+   padding: 5px;
+   line-height: 35px;
    margin-bottom: 10px;
    background-color: #333;
    color: #fff;
@@ -138,5 +132,7 @@ ul {
    left: 5%;
    right: 5%;
 }
+
+
 
 
